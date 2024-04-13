@@ -5,37 +5,24 @@
 # it will calculate Body Mass Index(BMI) using kg and m  [GUI]
 # formula weight / height * height
 
-import tkinter
-from tkinter.filedialog import asksaveasfilename  
 
-try:
-	from ctypes import windll,byref,sizeof,c_int
-except:
-	pass
+import tkinter
+from tkinter.filedialog import asksaveasfilename
+from tkinter import messagebox   # popup
+from graph import draw
 
 
 
 # <--- global value --->
 COLOR = '#444c69'   #hex
 file_path = ''  # path for saving the file
-val = ''   # empty string
+BMI = 0
+
+# graph representation
+def data_visualisation():
+	draw()
 
 
-# border color of the screen
-def bordercolor():
-	try:
-		HWND=windll.user32.GetParent(screen.winfo_id())
-		title_color=0x00000000
-		windll.dwmapi.DwmSetWindowAttribute(
-			HWND,
-			35,
-			byref(c_int(title_color)),
-			sizeof(c_int))
-	except:
-		pass
-
-
-# have to fix this!
 # to save the file record
 def save():
 	if file_path=='':
@@ -45,15 +32,16 @@ def save():
 		file_name=file_path
 
 	if file_name is not None:
-		data = f'Height = {heightfield.get()}\nWeight = {weightfield.get()}\nBMI = {val}'
+		data = f'\n{agefield.get()},{BMI}\n'    # way of storing data 18,24.24 [age,bmi]
 		
-		with open(file_name, 'w') as fh:
+		with open(file_name, 'a+') as fh:
 			fh.write(data)
 
 
 
-# clears the height and weight field
+# clears the age,height and weight field
 def clear():
+	agefield.delete(0,tkinter.END)
 	heightfield.delete(0,tkinter.END)   
 	weightfield.delete(0,tkinter.END)
 
@@ -61,30 +49,32 @@ def clear():
 
 # it calculates the bmi
 def calculate() -> float:
-	global val
+	global BMI
 	try:
 		height = float(heightfield.get())
 		weight = float(weightfield.get())
 
-		BMI = weight / (height ** 2)
+		if height == 0:
+			messagebox.showinfo("ERROR", "ERROR! Division by 0")
+			result.config(text='ERROR! Division by 0')
+			return
 
+		BMI = round((weight / (height ** 2)),2)  # formula  [rounding up to 2 digits]
+
+		# BMI conditions
 		if BMI <= 18.5:
-			val = f'{round(BMI,2)} - Under Weight'  # to print upto 2 decimal point 
-			result.config(text=val) 
+			result.config(text=f'{BMI} - Under Weight')
 		elif BMI >= 18.5 and BMI <= 24.9:
-			val = f'{round(BMI,2)} - Healthy Weight'  # to print upto 2 decimal point 
-			result.config(text=val) 
+			result.config(text=f'{BMI} - Healthy Weight') 
 		elif BMI >= 25.0 and BMI <= 29.9:
-			val = f'{round(BMI,2)} - Over Weight'  # to print upto 2 decimal point 
-			result.config(text=val) 
+			result.config(text=f'{BMI} - Over Weight') 
 		elif BMI >= 30.0:
-			val = f'{round(BMI,2)} - Obesity' # to print upto 2 decimal point 
-			result.config(text=f'{round(BMI,2)} - Obesity ') 
+			result.config(text=f'{BMI} - Obesity ') 
 		else:
-			val = 'Check the value correctly'
-			result.config(text=val)
+			result.config(text='Check the value correctly')
 
 	except ValueError:
+		messagebox.showinfo("ERROR", "Enter Correct Value!")
 		result.config(text='Enter Correct Value!')
 
 # main
@@ -93,13 +83,17 @@ if __name__ == '__main__':
 	#screen configurations
 	screen = tkinter.Tk()
 	screen.title("BMI Calculator")
-	bordercolor()  # change the default border color [only works in windows :( ]
 	screen.geometry("550x400")
 	screen.resizable(0,0)  # can't resize
 	screen.configure(background=COLOR)
 
 
 	# <--- widgets --->
+
+	# age input
+	tkinter.Label(screen,text='Age: ',background=COLOR,font=('monospace', 15)).place(x=50,y=50)
+	agefield = tkinter.Entry(screen)
+	agefield.place(x=200,y=50)
 
 	# height input
 	tkinter.Label(screen,text='Height [m]: ',background=COLOR,font=('monospace', 15)).place(x=50,y=100)
@@ -129,8 +123,12 @@ if __name__ == '__main__':
 	menubar = tkinter.Menu(screen,background='#28282B',foreground='white')
 
 	# save
-	save = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')  # save the record in a txt file
+	savemenu = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')  # save the record in a txt file
 	menubar.add_command(label='Save',command=save)
+
+	# graph
+	graph = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')  # exit 
+	menubar.add_command(label='Graph',command=data_visualisation)
 
 	# exit
 	exit = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')  # exit 
