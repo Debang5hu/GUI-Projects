@@ -9,7 +9,8 @@
 import tkinter
 from tkinter.filedialog import asksaveasfilename
 from tkinter import messagebox   # popup
-from graph import draw
+from graph import draw  # custom module for plotting the graph
+from webbrowser import open_new_tab  # for reading about the project
 
 
 
@@ -17,6 +18,10 @@ from graph import draw
 COLOR = '#444c69'   #hex
 file_path = ''  # path for saving the file
 BMI = 0
+
+def aboutus():
+	open_new_tab('https://github.com/Debang5hu/OIBSIP/blob/main/BMI-Calculator/README.md')
+
 
 # graph representation
 def data_visualisation():
@@ -129,6 +134,10 @@ if __name__ == '__main__':
 	# graph
 	graph = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')  # exit 
 	menubar.add_command(label='Graph',command=data_visualisation)
+
+	# about
+	about = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')
+	menubar.add_command(label='About',command=aboutus)
 
 	# exit
 	exit = tkinter.Menu(menubar, tearoff=False,background='#28282B',fg='white')  # exit 

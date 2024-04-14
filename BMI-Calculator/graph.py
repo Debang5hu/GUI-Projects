@@ -19,6 +19,7 @@ def draw():
             data = fh.read().split('\n')
     except:
         messagebox.showinfo("ERROR", "File Not Found!")
+        return
 
     for x in data:
         separatedata = x.split(',')
