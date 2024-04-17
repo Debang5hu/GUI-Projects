@@ -97,9 +97,9 @@ class zaraf():
                     text = self.recognizer.recognize_google(audio).lower()   # lowercase
                     print(text)
                     return text
-                except sr.UnknownValueError():
+                except sr.UnknownValueError:
                     print('unknown value')
-                except sr.RequestError():
+                except sr.RequestError:
                     print('request error')
                 except:
                     return None
