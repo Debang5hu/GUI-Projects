@@ -109,8 +109,7 @@ class zaraf():
 
         except:
             zara.speak('mic not found')
-            return None
-            sys.exit()
+            exit()
 
 
         '''text = input('enter: ')

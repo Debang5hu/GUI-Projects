@@ -5,10 +5,11 @@
 
 import requests
 import wikipedia # type: ignore
+from os import getenv
 
 
-WeatherAPI = 'b145926e1363addf8db5a988dad9ef4a'
-NewsAPI = '4dbc17e007ab436fb66416009dfb59a8'
+WeatherAPI = getenv('WeatherAPI')
+NewsAPI = getenv('NewsAPI')
 
 
 # fetch weather info from openweathermap api 
