@@ -37,5 +37,4 @@ OS Used: Linux (Debian)
 
 I really enjoyed and learned new things while doing the projects :)  
 
-[!NOTE]  
-kudos to __Oasis Infobyte__ (https://in.linkedin.com/company/oasis-infobyte) for providing me this opportunity.  
+__NOTE:__ kudos to __Oasis Infobyte__ (https://in.linkedin.com/company/oasis-infobyte) for providing me this opportunity.  
