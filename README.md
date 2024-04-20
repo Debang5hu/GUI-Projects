@@ -25,11 +25,11 @@ OS Used: Linux (Debian)
 <details>  
 <summary>Projects I chose</summary>  
 
-1. Voice Assistant     (https://github.com/Debang5hu/OIBSIP/tree/main/Voice-Assistant)
+1. Voice Assistant     (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_1)
 
-2. BMI Calculator      (https://github.com/Debang5hu/OIBSIP/tree/main/BMI-Calculator)
+2. BMI Calculator      (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_2)
 
-3. Password Generator  (https://github.com/Debang5hu/OIBSIP/tree/main/Password-Generator)  
+3. Password Generator  (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_5)  
 </details>  
 
 ---  
