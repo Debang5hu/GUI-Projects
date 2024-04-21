@@ -1,0 +1,5 @@
+Pillow==9.5.0
+Pillow==10.3.0
+pytz==2024.1
+Requests==2.31.0
+timezonefinder==6.5.0
