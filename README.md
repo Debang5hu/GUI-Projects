@@ -39,4 +39,6 @@ OS Used: Linux (Debian)
 
 I really enjoyed and learned new things while doing the projects :)  
 
+BLOG: https://medium.com/@debangshu0/my-first-internship-eb75ee54ebff  
+
 __NOTE:__ kudos to __Oasis Infobyte__ (https://in.linkedin.com/company/oasis-infobyte) for providing me this opportunity.  
