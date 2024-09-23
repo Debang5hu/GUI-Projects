@@ -22,13 +22,13 @@ OS Used: Linux (Debian)
 <details>  
 <summary>Projects I chose</summary>  
 
-1. Weather App         (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_6)
+1. Weather App         (https://github.com/Debang5hu/GUI-Projects/tree/main/weather_app)
    
-2. BMI Calculator      (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_2)
+2. BMI Calculator      (https://github.com/Debang5hu/GUI-Projects/tree/main/bmi-calculator)
 
-3. Password Generator  (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_5)
+3. Password Generator  (https://github.com/Debang5hu/GUI-Projects/tree/main/password-generator)
 
-4. Voice Assistant     (https://github.com/Debang5hu/OIBSIP/tree/main/oibsip_1)
+4. Voice Assistant     (https://github.com/Debang5hu/GUI-Projects/tree/main/voice-assistant)
 </details>  
 
 ---  
