@@ -30,9 +30,9 @@ python3 main.py
 
 ## Demo:  
 
+https://github.com/user-attachments/assets/f81e8d36-6f5d-4a2e-9360-6be05b798a7b  
 
 
-https://github.com/Debang5hu/OIBSIP/assets/114200360/cc3a8583-cc21-4624-ae70-7149d88434f1  
 
 
 

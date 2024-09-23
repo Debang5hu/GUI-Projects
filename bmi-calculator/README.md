@@ -31,4 +31,5 @@ python3 BMI.py
 
 ## Demo:  
 
-https://github.com/Debang5hu/OIBSIP/assets/114200360/d9223492-0389-41a5-87c4-24289493eff0
+https://github.com/user-attachments/assets/ac3d8fde-5a3f-422a-b42c-1fcd39e5e6aa  
+

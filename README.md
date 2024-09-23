@@ -1,11 +1,8 @@
-![banner0](https://github.com/Debang5hu/OIBSIP/assets/114200360/25e11c90-6c02-4248-a9ac-f27b656f9599)  
-
----  
 ### About  
 
 Hey everyone 👋 , I am Debangshu Roy pursuing CSE (Cybersecurity) currently in 4th semester.  
 
-It was a virtual internship which was observed by __*Oasis Infobyte*__ . I opted for a python internship and had 1 month for completing 3 projects,which I successfully did 😊.Got to learn a lot of things not only related  
+It was a virtual internship. I opted for a python internship and had 1 month for completing 3 projects,which I successfully did 😊.Got to learn a lot of things not only related  
 to programming but also skills like  
 
 > ⏱️ Time Manaement  
@@ -38,7 +35,3 @@ OS Used: Linux (Debian)
 ### Conclusion  
 
 I really enjoyed and learned new things while doing the projects :)  
-
-BLOG: https://medium.com/@debangshu0/my-first-internship-eb75ee54ebff  
-
-__NOTE:__ kudos to __Oasis Infobyte__ (https://in.linkedin.com/company/oasis-infobyte) for providing me this opportunity.  
